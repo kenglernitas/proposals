@@ -10,34 +10,34 @@ type Params = {
   slug: string;
 };
 
-const schema = keystatic.collections.xips.schema;
+const schema = keystatic.collections.kleips.schema;
 const fields = Object.keys(schema);
 
 export async function generateStaticParams(): Promise<Params[]> {
-  const topics = await reader.collections.xips.all();
-  return topics.map((xip) => ({
-    slug: xip.slug,
+  const topics = await reader.collections.kleips.all();
+  return topics.map((kleip) => ({
+    slug: kleip.slug,
   }));
 }
 
 export default async function Page({ params }: { params: Params }) {
-  const xip = await reader.collections.xips.read(params.slug, {
+  const kleip = await reader.collections.kleips.read(params.slug, {
     resolveLinkedFiles: true,
   });
 
-  if (!xip) return notFound();
-  const colors = getStatusColors(xip.status);
+  if (!kleip) return notFound();
+  const colors = getStatusColors(kleip.status);
 
   return (
     <PageContainer>
-      <Header currentPage="XIPs" />
+      <Header currentPage="KLEIPs" />
       <div className="my-8 flex border-t border-slate-800">
-        <Back href="/">Back to all XIPs</Back>
+        <Back href="/">Back to all KLEIPs</Back>
       </div>
-      <ID status={xip.status}>XIP-{number(xip.id!)}</ID>
-      <PageTitle>{xip.title}</PageTitle>
-      <Properties fields={fields} data={xip} />
-      <Renderer document={xip.content} />
+      <ID status={kleip.status}>KLEIP-{number(kleip.id!)}</ID>
+      <PageTitle>{kleip.title}</PageTitle>
+      <Properties fields={fields} data={kleip} />
+      <Renderer document={kleip.content} />
     </PageContainer>
   );
 }

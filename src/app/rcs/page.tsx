@@ -17,7 +17,8 @@ export default async function Page() {
 
   return (
     <PageContainer>
-      <Header currentPage="RCs" className="mb-16" />
+            {/*
+      <Header currentPage="RCs" className="mb-16" />*/}
       <PageTitle>Release Candidates</PageTitle>
       <PageIntro>
         RCs are an alternative method in which only approved working groups are

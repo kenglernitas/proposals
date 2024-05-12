@@ -17,7 +17,9 @@ export default async function Page() {
 
   return (
     <PageContainer>
+            {/*
       <Header currentPage="WGCs" className="mb-16" />
+      */}
       <PageTitle>Working Group Charters</PageTitle>
       <PageIntro>
         WGCs are a documentation type that outlines the establishment of a

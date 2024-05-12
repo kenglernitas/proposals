@@ -5,10 +5,10 @@ import { reader } from '@/lib/reader';
 import { number } from '@/lib/util';
 import keystatic from '@/../keystatic.config';
 
-const statuses = keystatic.collections.xips.schema.status.options;
+const statuses = keystatic.collections.kleips.schema.status.options;
 
 export default async function Home() {
-  const entries = await reader.collections.xips.all();
+  const entries = await reader.collections.kleips.all();
   entries.sort((a, b) => (a.entry.id || 0) - (b.entry.id || 0));
   const byStatus = statuses.map((status) => {
     const matches = entries.filter((i) => i?.entry.status === status.value);
@@ -17,12 +17,12 @@ export default async function Home() {
 
   return (
     <PageContainer>
-      <Header currentPage="XIPs" className="mb-16" />
-      <PageTitle>Infinex Improvement Proposals</PageTitle>
+      <Header currentPage="KLEIPs" className="mb-16" />
+      <PageTitle>Keng Lernitas Ecosystem Improvement Proposals</PageTitle>
       <PageIntro>
-        XIPs are the primary mechanism for suggesting new features, collecting
+        KLEIPs are the primary mechanism for suggesting new features, collecting
         community input on an issue, documenting design decisions for changes to
-        Infinex, and making adjustments to system parameters.
+        Keng Lernitas Ecosystem, and making adjustments to system parameters.
       </PageIntro>
 
       {byStatus.map((i) => {
@@ -36,8 +36,8 @@ export default async function Home() {
                 <Entry
                   key={e.slug}
                   data={e}
-                  path="/xips/"
-                  id={`XIP-${number(e.entry.id!)}`}
+                  path="/kleips/"
+                  id={`KLEIP-${number(e.entry.id!)}`}
                 />
               ))}
             </ul>

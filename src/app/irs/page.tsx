@@ -17,11 +17,12 @@ export default async function IRs() {
 
   return (
     <PageContainer>
-      <Header currentPage="IRs" className="mb-16" />
-      <PageTitle>Infinex Referendums</PageTitle>
+      {/*
+      <Header currentPage="IRs" className="mb-16" />*/}
+      <PageTitle>Keng Lernitas Ecosystem Referendums</PageTitle>
       <PageIntro>
         IRs are the mechanism for how meta-governance changes are made to the
-        Infinex Protocol.
+        Keng Lernitas Ecosystem Protocol.
       </PageIntro>
 
       {byStatus.map((i) => {

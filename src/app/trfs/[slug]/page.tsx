@@ -29,7 +29,8 @@ export default async function Page({ params }: { params: Params }) {
 
   return (
     <PageContainer>
-      <Header currentPage="TRFs" />
+            {/*
+      <Header currentPage="TRFs" />*/}
       <div className="my-8 flex border-t border-slate-800">
         <Back href="/trfs">Back to all TRFs</Back>
       </div>

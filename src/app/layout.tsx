@@ -5,8 +5,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Infinex Proposals',
-  description: 'Infinex Governance Proposals (XIPs, IRs, WGCs, RCs)',
+  title: 'Keng Lernitas Ecosystem Proposals',
+  description: 'Keng Lernitas Ecosystem Governance Proposals (KLEIPs)',
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-slate-950 text-slate-200`}>
+      <body className={`${inter.className} bg-[#07171a] text-slate-200`}>
         {children}
       </body>
     </html>

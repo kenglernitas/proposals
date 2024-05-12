@@ -14,7 +14,7 @@ export function Renderer({
   );
 }
 
-const hiddenFields = ['content', 'title', 'xip', 'ir', 'id'];
+const hiddenFields = ['content', 'title', 'kleip', 'ir', 'id'];
 
 const fieldLabels: Record<string, string> = {
   wg: 'Associated WG',

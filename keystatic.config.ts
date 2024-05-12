@@ -10,10 +10,10 @@ export default config({
     project,
   },
   collections: {
-    xips: collection({
-      label: 'XIPs',
+    kleips: collection({
+      label: 'KLEIPs',
       slugField: 'filename',
-      path: 'content/xips/*',
+      path: 'content/kleips/*',
       format: { contentField: 'content' },
       entryLayout: 'content',
       schema: {
@@ -26,7 +26,7 @@ export default config({
           validation: { length: { min: 1 } },
         }),
         id: fields.integer({
-          label: 'XIP Number',
+          label: 'KLEIP Number',
           description: 'The ID of this proposal',
         }),
         author: fields.text({
@@ -47,7 +47,7 @@ export default config({
         }),
         network: fields.text({
           label: 'Network(s)',
-          description: 'e.g Base, Optimism, Ethereum, Solana, etc',
+          description: 'e.g Base, Optimism, Solana',
         }),
         status: fields.select({
           label: 'Status',
@@ -71,8 +71,8 @@ export default config({
           links: true,
           tables: true,
           images: {
-            directory: 'public/assets/xips',
-            publicPath: '/assets/xips/',
+            directory: 'public/assets/kleips',
+            publicPath: '/assets/kleips/',
           },
         }),
       },

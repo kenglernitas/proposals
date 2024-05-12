@@ -32,11 +32,11 @@ function PageNavItem({
 }
 
 const pages = [
-  { href: '/', label: 'XIPs' },
-  { href: '/irs', label: 'IRs' },
-  { href: '/wgcs', label: 'WGCs' },
-  { href: '/rcs', label: 'RCs' },
-  { href: '/trfs', label: 'TRFs' },
+  { href: '/', label: 'KLEIPs' },
+  //{ href: '/irs', label: 'IRs' },
+  //{ href: '/wgcs', label: 'WGCs' },
+  //{ href: '/rcs', label: 'RCs' },
+  //{ href: '/trfs', label: 'TRFs' },
 ] as const;
 
 type CurrentPage = (typeof pages)[number]['label'];
@@ -67,7 +67,7 @@ export function Header({
   return (
     <div className={`flex items-center justify-between ${className}`}>
       <div className="flex items-center gap-6">
-        <InfinexLogo className="w-36" />
+        <InfinexLogo className="w-80" />
         <div className="text-xl text-slate-600">/</div>
         <h1 className="text-xl font-semibold text-slate-50">Proposals</h1>
       </div>

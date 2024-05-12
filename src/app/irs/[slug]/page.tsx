@@ -29,7 +29,8 @@ export default async function Page({ params }: { params: Params }) {
 
   return (
     <PageContainer>
-      <Header currentPage="IRs" />
+            {/*
+      <Header currentPage="IRs" />*/}
       <div className="my-8 flex border-t border-slate-800">
         <Back href="/irs">Back to all IRs</Back>
       </div>
