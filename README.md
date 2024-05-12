@@ -6,7 +6,8 @@ The new home for Keng Lernitas Ecosystem KLEIPs. View at [proposals.kenglernitas
 
 ### Contributing
 
-The KLEIP Proposal template, which is the first proposal of the category, specifically highlights the use-case and function.
+
+The Keng Lernitas Ecosystem, which governs the tokens $2192 and $ZORKSEES deployed on Optimism, Base, and Solana, uses KLEIPs (Keng Lernitas Ecosystem Improvement Proposals), with the KLEIP Proposal template being the first proposal of its category that specifically highlights the use-case and function.
 
 Contributors should then look to make a fork of the this repository where they will write their proposal. Your first PR should be a final draft of the final proposal. It must then meet the correct formatting criteria enforced by the build (largely, correct metadata in the header).
 
