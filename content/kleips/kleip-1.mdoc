@@ -3,7 +3,7 @@ title: KLEIP Purpose and Guidelines
 id: 1
 author: Pstar(@thierbig)
 type: governance
-network: Base
+network: Optimism, Base and Solana
 status: Implemented
 created: '2024-05-11'
 updated: '2024-05-11'
@@ -14,13 +14,13 @@ Keng Lernitas Ecosystem Improvement Proposals (KLEIPs) are a fundamental compone
 
 ## KLEIP Rationale
 
-Once the first Keng Lernitas Ecosystem Council is established, KLEIPs are proposed as the primary mechanism for suggesting new features, collecting community input on an issue, documenting design decisions for changes to Keng Lernitas Ecosystem, and making adjustments to system parameters. By encompassing these aspects, KLEIPs help maintain clarity in Keng Lernitas Ecosystem's development roadmap, enabling stakeholders to collectively steer the course of the platform's growth.
+KLEIPs are proposed as the primary mechanism for suggesting new features, collecting community input on an issue, documenting design decisions for changes to Keng Lernitas Ecosystem, and making adjustments to system parameters. By encompassing these aspects, KLEIPs help maintain clarity in Keng Lernitas Ecosystem's development roadmap, enabling stakeholders to collectively steer the course of the $2192 and $zorksees growth.
 
 ## KLEIP Work Flow
 
-Parties involved in the process include the *author*, the [*KLEIP editors*](#KLEIP-editors), the Keng Lernitas Ecosystem Core Contributors (CCs), the Keng Lernitas Ecosystem Council, and the Keng Lernitas Ecosystem Community.
+Parties involved in the process include the *author*, the [*KLEIP editors*](#KLEIP-editors), the Keng Lernitas Ecosystem Developers, and the Keng Lernitas Ecosystem Community.
 
-Given the decentralized nature of the Keng Lernitas Ecosystem development process, anyone within the Keng Lernitas Ecosystem community is welcome to submit an KLEIP. However, to foster a collaborative environment, it is strongly encouraged that proposers engage in discussions within the Keng Lernitas Ecosystem Discord community before formally submitting their proposals. This preliminary discourse allows for the exchange of ideas, feedback, and refinement of concepts, ultimately leading to more robust and well-considered KLEIPs.
+Given the decentralized nature of the Keng Lernitas Ecosystem development process, anyone within the Keng Lernitas Ecosystem community is welcome to submit an KLEIP. However, to foster a collaborative environment, it is strongly encouraged that proposers engage in discussions within the Keng Lernitas Ecosystem Telegram (and Discord in the future!) community before formally submitting their proposals. This preliminary discourse allows for the exchange of ideas, feedback, and refinement of concepts, ultimately leading to more robust and well-considered KLEIPs.
 
 Progression through the KLEIP workflow is requested by the KLEIP author through a pull request, and reviewed by the KLEIP editors.
 
@@ -36,23 +36,23 @@ The author of the KLEIP proposal is responsible for building consensus within th
 
 Once a `Draft` is believed to be mature enough and ready to progress, it must be `Approved` to be executed. Approval of an KLEIP will be granted through:
 
-- Consultation with at least one member of the Keng Lernitas Ecosystem council, found through the Keng Lernitas Ecosystem Discord. They will assess whether the proposal needs a ‘Feasibility study’.
-- If it does need a ‘Feasibility Study’, the KLEIP will progress to the `Feasibility` stage. It will then be assigned a CC who will work with the author to conduct a ‘Feasibility study’. Once all parties are satisfied, the KLEIP is moved to `IC Review Pending` where it will be discussed.
-- If it does not need a ‘Feasibility Study’, the KLEIP will progress straight to `IC Review Pending` where it will be discussed.
-- The Keng Lernitas Ecosystem council can send it back to the `Draft` or `Feasibility` stage if they believe more edits are required, if not, it will enter the next stage
+- Consultation with at least one member of the Keng Lernitas Ecosystem Developer, found through the Keng Lernitas Ecosystem Discord. They will assess whether the proposal needs a ‘Feasibility study’.
+- If it does need a ‘Feasibility Study’, the KLEIP will progress to the `Feasibility` stage. It will then be assigned a Developer who will work with the author to conduct a ‘Feasibility study’. Once all parties are satisfied, the KLEIP is moved to `Developer Review Pending` where it will be discussed.
+- If it does not need a ‘Feasibility Study’, the KLEIP will progress straight to `Developer Review Pending` where it will be discussed.
+- The Keng Lernitas Ecosystem Developers can send it back to the `Draft` or `Feasibility` stage if they believe more edits are required, if not, it will enter the next stage
 
 1. Approval
 
-KLEIPs will be voted on by the Keng Lernitas Ecosystem Council (`IC Vote Pending`) for five days, and proposals will be passed only under a majority decision. Approved KLEIPs are moved to `Approved`, and then `Implemented` once executed by the Keng Lernitas Ecosystem Council, protocol CCs, or community members. Otherwise, it is `Rejected`.
+KLEIPs will be voted on by the Keng Lernitas Ecosystem Community via snapshot.org for a given duration, and proposals will be passed only under a majority decision. Approved KLEIPs are moved to `Approved`, and then `Implemented` once executed by the Keng Lernitas Ecosystem Developers or community members. Otherwise, it is `Rejected`.
 
 ## KLEIP status terms
 
-- **Draft** – The initial state of a new KLEIP before the Keng Lernitas Ecosystem Council and core contributors have assessed it.
-- **Feasibility** – a KLEIP that is being assessed for feasibility with an assigned Core Contributor.
-- **IC Review Pending** – a KLEIP that is awaiting a Keng Lernitas Ecosystem Council Review after the Author and Core Contributor are satisfied with feasibility.
-- **Vote In Progress** – a KLEIP currently being voted on by the council.
-- **Approved** – a KLEIP that has successfully reached a majority Keng Lernitas Ecosystem Council vote in favour.
-- **Rejected** – a KLEIP that has failed to reach a majority Keng Lernitas Ecosystem Council vote in favour.
+- **Draft** – The initial state of a new KLEIP before the Keng Lernitas Ecosystem Developers have assessed it.
+- **Feasibility** – a KLEIP that is being assessed for feasibility with an assigned Developer.
+- **Developer Review Pending** – a KLEIP that is awaiting a Keng Lernitas Ecosystem Developers Review after the Author is satisfied with feasibility.
+- **Vote In Progress** – a KLEIP being voted on by the Keng Lernitas Ecosystem community on snapshot.org.
+- **Approved** – a KLEIP that has successfully reached a majority Keng Lernitas Ecosystem snapshot.org vote in favour.
+- **Rejected** – a KLEIP that has failed to reach a majority Keng Lernitas Ecosystem snapshot.org vote in favour.
 - **Implemented** – a KLEIP that has been released and implemented.
 
 ## What belongs in a successful KLEIP?
@@ -85,7 +85,7 @@ Each KLEIP must begin with an [RFC 822](https://www.ietf.org/rfc/rfc822.txt) sty
 
 `* discussions-to:` <a url pointing to the official discussion thread within the Keng Lernitas Ecosystem discord>
 
-`status:` < Draft | Feasibility | SC Review Pending | Vote Pending | Approved | Rejected | Implemented >
+`status:` < Draft | Feasibility | Developer Review Pending | Vote Pending | Approved | Rejected | Implemented >
 
 `created:` <date created on>
 
@@ -99,7 +99,7 @@ Each KLEIP must begin with an [RFC 822](https://www.ietf.org/rfc/rfc822.txt) sty
 
 `parameter-changes:` <a list of the parameter changes that are being proposed, or “None” if no protocol parameters are being changed in the specification>
 
-`network:` <Ethereum | Optimism | Base | Ethereum & Optimism | Ethereum, Optimism & Base>
+`network:` <Ethereum | Optimism | Base | Base & Optimism | Solana, Optimism & Base>
 
 `implementor:` \ <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName foo@bar.com, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
 
@@ -125,7 +125,7 @@ if the email address is not given.
 
 #### `discussions-to` header
 
-While an KLEIP is in **Draft** or **Feasibility** status, a `discussions-to` header will indicate the URL for [Discord](https://discord.gg/Keng Lernitas Ecosystem) where the KLEIP is being discussed.
+While an KLEIP is in **Draft** or **Feasibility** status, a `discussions-to` header will indicate the URL for Telegram (and Discord in the future!) where the KLEIP is being discussed.
 
 #### `created` header
 
@@ -154,7 +154,7 @@ KLEIPs may include auxiliary files such as diagrams. Such files must be named KL
 
 ## KLEIP Editor Responsibilities
 
-For every new KLEIP submitted, the Core Contributor Councillor (CCC) will operate as an editor. During the drafting stage of the process, the CCC will work closely with the Author to:
+For every new KLEIP submitted, the Developer(s) will operate as an editor. During the drafting stage of the process, the Developer(s) will work closely with the Author to:
 
 - Ensure the title accurately describes the content.
 - Read the KLEIP to check if it is ready: sound and complete. The ideas must make technical sense, even if they don't seem likely to get to final status.
@@ -175,7 +175,7 @@ The editors do not pass judgment on KLEIPs. They merely hold an administrative a
 
 ## History
 
-This KLEIP document was derived heavily from the SIP Synthetix Improvement Proposal document and in many places, text was simply copied and modified. Any comments about the KLEIP document should be directed to the KLEIP editors. The history of the SIP is quoted below from the SIP document for context:
+This KLEIP document was derived heavily from the Infinex Improvement Proposal document which is derived from the SIP Synthetix Improvement Proposal document and in many places, text was simply copied and modified. Any comments about the KLEIP document should be directed to the KLEIP editors. The history of the SIP is quoted below from the SIP document for context:
 
 - *“The SIP document was derived heavily from the EIP Ethereum Improvement Proposal document. In many places text was simply copied and modified. Any comments about the SIP document should be directed to the SIP editors. The history of the EIP is quoted below from the EIP document for context:”*
   - *"This document (EIP) was derived heavily from*[*Bitcoin's BIP-0001*](https://github.com/bitcoin/bips)*written by Amir Taaki which in turn was derived from*[*Python's PEP-0001*](https://www.python.org/dev/peps/)*. In many places text was simply copied and modified. Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger, they are not responsible for its use..."* *

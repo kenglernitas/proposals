@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss';
 
-const infinexSlate = {
+const kengLernitasSlate = {
   0: 'rgba(230, 234, 247)',
   100: 'rgba(159, 168, 198)',
   200: 'rgba(45, 55, 83)',
@@ -27,19 +27,19 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        infinexSlate,
+        kengLernitasSlate,
         brand: 'rgb(255, 155, 105)',
         'brand-darker': 'rgb(207, 116, 70)',
         'brand-lighter': 'rgb(255, 207, 182)',
         fill: {
-          page: infinexSlate[700],
-          block: infinexSlate[600],
-          element: infinexSlate[300],
-          'element-hovered': infinexSlate[200],
-          'element-pressed': infinexSlate[450],
+          page: kengLernitasSlate[700],
+          block: kengLernitasSlate[600],
+          element: kengLernitasSlate[300],
+          'element-hovered': kengLernitasSlate[200],
+          'element-pressed': kengLernitasSlate[450],
         },
         stroke: {
-          block: infinexSlate[400],
+          block: kengLernitasSlate[400],
         },
       },
     },

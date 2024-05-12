@@ -55,7 +55,7 @@ export default config({
           options: [
             { label: 'Draft', value: 'Draft' },
             { label: 'Feasibility', value: 'Feasibility' },
-            { label: 'IC Review Pending', value: 'IC Review Pending' },
+            { label: 'Developer Review Pending', value: 'Developer Review Pending' },
             { label: 'Vote Pending', value: 'Vote Pending' },
             { label: 'Approved', value: 'Approved' },
             { label: 'Rejected', value: 'Rejected' },

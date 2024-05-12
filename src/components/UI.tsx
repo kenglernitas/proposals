@@ -9,7 +9,7 @@ export function PageContainer({ children }: { children: React.ReactNode }) {
       <div className="mt-8 flex w-full max-w-4xl justify-around border-t border-t-slate-800 py-8">
         <a
           className="flex items-center gap-2 text-sm text-slate-500 hover:text-slate-50"
-          href="https://github.com/thierbig/proposals"
+          href="https://github.com/kenglernitas/proposals"
           target="_blank"
         >
           <GitHubOutlineIcon />

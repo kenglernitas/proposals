@@ -1,4 +1,4 @@
-import { InfinexLogo } from '@/components/Logo';
+import { KengLernitasLogo } from '@/components/Logo';
 
 function PageNav({ children }: { children: React.ReactNode }) {
   return (
@@ -67,7 +67,7 @@ export function Header({
   return (
     <div className={`flex items-center justify-between ${className}`}>
       <div className="flex items-center gap-6">
-        <InfinexLogo className="w-80" />
+        <KengLernitasLogo className="w-80" />
         <div className="text-xl text-slate-600">/</div>
         <h1 className="text-xl font-semibold text-slate-50">Proposals</h1>
       </div>
