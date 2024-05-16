@@ -72,7 +72,7 @@ export function Header({
 }) {
   return (
     <div className={`flex items-center ${className}`}>
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-6 mr-10px">
         <KengLernitasLogo className="w-80" />
         <div className="text-xl text-slate-600">/</div>
         <h1 className="text-xl font-semibold text-slate-50">Proposals</h1>
