@@ -5,8 +5,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Keng Lernitas Ecosystem Proposals',
-  description: 'Keng Lernitas Ecosystem Governance Proposals (KLEIPs)',
+  title: 'Keng Lernitas Ekosistem Proposals',
+  description: 'Keng Lernitas Ekosistem Governance Proposals (KLEIPs)',
 };
 
 export default function RootLayout({

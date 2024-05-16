@@ -19,10 +19,10 @@ export default async function IRs() {
     <PageContainer>
       {/*
       <Header currentPage="IRs" className="mb-16" />*/}
-      <PageTitle>Keng Lernitas Ecosystem Referendums</PageTitle>
+      <PageTitle>Keng Lernitas Ekosistem Referendums</PageTitle>
       <PageIntro>
         IRs are the mechanism for how meta-governance changes are made to the
-        Keng Lernitas Ecosystem Protocol.
+        Keng Lernitas Ekosistem Protocol.
       </PageIntro>
 
       {byStatus.map((i) => {

@@ -21,7 +21,7 @@ export default async function TRFSs() {
       <Header currentPage="TRFs" className="mb-16" />*/}
       <PageTitle>Treasury Requests for Feedback</PageTitle>
       <PageIntro>
-A TRF is a document written by the Treasury Seat, which outlines a proposed initiative from the Keng Lernitas Ecosystem Treasury.
+A TRF is a document written by the Treasury Seat, which outlines a proposed initiative from the Keng Lernitas Ekosistem Treasury.
       </PageIntro>
 
       {byStatus.map((i) => {

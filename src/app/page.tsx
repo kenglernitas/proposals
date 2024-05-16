@@ -18,9 +18,9 @@ export default async function Home() {
   return (
     <PageContainer>
       <Header currentPage="KLEIPs" className="mb-16" />
-      <PageTitle>Keng Lernitas Ecosystem Improvement Proposals</PageTitle>
+      <PageTitle>Keng Lernitas Ekosistem Improvement Proposals</PageTitle>
       <PageIntro>
-      KLEIPs are the primary mechanism for suggesting new features, collecting community input, documenting design decisions for changes to the Keng Lernitas Ecosystem, and making adjustments to system parameters, including the governance of tokens $2192 and $ZORKSEES across Optimism, Base, and Solana.
+      KLEIPs are the primary mechanism for suggesting new features, collecting community input, documenting design decisions for changes to the Keng Lernitas Ekosistem, and making adjustments to system parameters, including the governance of tokens $2192 and $ZORKSEES across Optimism, Base, and Solana.
       </PageIntro>
 
       {byStatus.map((i) => {

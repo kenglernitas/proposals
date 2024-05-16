@@ -17,9 +17,13 @@ function PageNavItem({
   href: string;
   isSelected?: boolean;
 }) {
+
+  const isExternal = href.startsWith('http');
+
   return (
     <a
       href={href}
+      target={isExternal ? '_blank' : undefined}
       className={`inline-block rounded-md px-3 py-2 text-sm font-medium ${
         isSelected
           ? 'bg-brand text-slate-950'
@@ -33,6 +37,7 @@ function PageNavItem({
 
 const pages = [
   { href: '/', label: 'KLEIPs' },
+  { href: 'https://snapshot.org/#/kenglernitaseco.eth', label: 'Vote' },
   //{ href: '/irs', label: 'IRs' },
   //{ href: '/wgcs', label: 'WGCs' },
   //{ href: '/rcs', label: 'RCs' },
@@ -65,7 +70,7 @@ export function Header({
   className?: string;
 }) {
   return (
-    <div className={`flex items-center justify-between ${className}`}>
+    <div className={`flex items-center ${className}`}>
       <div className="flex items-center gap-6">
         <KengLernitasLogo className="w-80" />
         <div className="text-xl text-slate-600">/</div>
