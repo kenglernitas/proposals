@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Keng Lernitas Ekosistem Proposals',
-  description: 'Keng Lernitas Ekosistem Governance Proposals (KLEIPs)',
+  description: 'Keng Lernitas Ekosistem Guvernanz',
 };
 
 export default function RootLayout({
