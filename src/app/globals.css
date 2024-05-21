@@ -15,17 +15,3 @@
       margin-left: -25px;
     }
   }
-
-
-  :root {
-    --primary-color: black;
-    --secondary-color: white;
-  }
-
-  svg .cls-2 {
-    fill: var(--primary-color);
-  }
-
-  svg .cls-5 {
-    fill: var(--secondary-color);
-  }
