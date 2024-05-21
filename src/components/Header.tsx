@@ -37,7 +37,7 @@ function PageNavItem({
 
 const pages = [
   { href: '/', label: 'KLEIPs' },
-  { href: 'https://snapshot.org/#/kenglernitaseco.eth', label: 'Vote' },
+  { href: 'https://vote.kenglernitas.wtf', label: 'Vote' },
   { href: 'https://kenglernitas.wtf', label: 'Witepaiper' },
   //{ href: '/irs', label: 'IRs' },
   //{ href: '/wgcs', label: 'WGCs' },
