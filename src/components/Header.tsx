@@ -73,7 +73,7 @@ export function Header({
   return (
     <div className={`flex items-center ${className}`}>
       <div className="flex items-center gap-6 mr-10px">
-      <KengLernitasLogo className="w-24 h-24 sm:w-36 sm:h-36 md:w-60 md:h-60 lg:w-64 lg:h-64 xl:w-80 xl:h-80" />
+      <KengLernitasLogo className="w-24 sm:w-36 md:w-60 lg:w-64 xl:w-80" />
         <div className="text-xl text-slate-600">/</div>
         <h1 className="text-xl font-semibold text-slate-50">Proposals</h1>
       </div>
