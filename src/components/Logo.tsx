@@ -12,12 +12,10 @@ export const KengLernitasLogo = (props: LogoProps) => {
       <defs>
         <style>{`
           .cls-1 { fill: #d89330; }
-          .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 { stroke-width: 0px; }
-          .cls-2 { fill: black; }
+          .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 { stroke-width: 0px; }          
           .cls-7 { fill: none; stroke: #fff6e9; stroke-linecap: round; stroke-linejoin: round; stroke-width: 8px; }
           .cls-3 { fill: #fbd992; }
-          .cls-4 { fill: #d70211; }
-          .cls-5 { fill: white; }
+          .cls-4 { fill: #d70211; }          
           .cls-6 { fill: #e3855f; }
         `}</style>
       </defs>

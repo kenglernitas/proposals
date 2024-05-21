@@ -69,10 +69,16 @@ function Nav({ currentPage }: { currentPage: CurrentPage }) {
       };
     }
   }, []);
+
+  if (screenWidth === null) {
+    // Don't render anything until the screen width is determined
+    return null;
+  }
+
   return (
     <PageNav>
       {pages.map((page) => {
-        if (screenWidth !== null && screenWidth < 500 && page.label === 'Witepaiper') {
+        if (screenWidth < 500 && page.label === 'Witepaiper') {
           return null;
         }
         return (
@@ -100,7 +106,7 @@ export function Header({
     <div className={`flex items-center ${className}`}>
       <div className="flex items-center gap-2.5 sm:gap-6 mr-10px">
       <div className="svg-margin">
-      <KengLernitasLogo className="w-24 sm:w-36 md:w-60 lg:w-64 xl:w-80" />
+      <KengLernitasLogo className="w-28 sm:w-36 md:w-60 lg:w-64 xl:w-80" />
       </div>
         <div className="text-xl text-slate-600">/</div>
         <h1 className="text-xl font-semibold text-slate-50">Proposals</h1>
