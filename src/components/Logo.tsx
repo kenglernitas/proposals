@@ -6,18 +6,18 @@ export const KengLernitasLogo = (props: LogoProps) => {
 	<svg
 	width="278"
 	height="74.84"
-	viewBox="140 0 1650 516.86"
+	viewBox="150 100 1630 400"
 	xmlns="http://www.w3.org/2000/svg"
 	{...props}>
       <defs>
         <style>{`
           .cls-1 { fill: #d89330; }
           .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 { stroke-width: 0px; }
-          .cls-2 { fill: #000; }
+          .cls-2 { fill: black; }
           .cls-7 { fill: none; stroke: #fff6e9; stroke-linecap: round; stroke-linejoin: round; stroke-width: 8px; }
           .cls-3 { fill: #fbd992; }
           .cls-4 { fill: #d70211; }
-          .cls-5 { fill: #fff; }
+          .cls-5 { fill: white; }
           .cls-6 { fill: #e3855f; }
         `}</style>
       </defs>
