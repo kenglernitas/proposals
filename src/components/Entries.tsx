@@ -50,7 +50,7 @@ export function Entry({
         className="group -mx-1 my-2 block rounded-lg p-1 hover:bg-slate-900"
       >
         <span
-          className={`mr-2 inline-block w-14 rounded border bg-slate-900 py-1 text-center text-sm font-bold ${colors.border} ${colors.text}`}
+          className={`mr-2 inline-block w-14 rounded border bg-slate-900 py-1 text-center text-xs font-bold ${colors.border} ${colors.text}`}
         >
           {id}
         </span>{' '}
