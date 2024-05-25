@@ -1,0 +1,87 @@
+---
+title: Guvernanz Transition and First Election
+id: 2
+author: Pstar (@thierbig)
+type: governance
+network: Base
+status: Draft
+created: '2024-05-25'
+updated: '2024-05-25'
+---
+
+# Proposal Summary
+KLEIP-2 proposes a transition into guvernanz voted on Snapshot and to start the first election for Treasury management.
+
+# Specification
+
+## Overview
+KLE will use Snapshot’s gas-less, off-chain guvernanz platform [https://vote.kenglernitas.wtf](https://vote.kenglernitas.wtf) that will handle the KLEIP proposals process of the Keng Lernitas Ekosistem. The platform will enable community members to vote via IPFS messages/signatures. The first election for Treasury Management will then be held on Snapshot.
+
+The current Keng Lernitas Ekosistem guvernanz process does not exist, making it challenging to ensure community participation and distribution for events such as the batel and other airdrops. Since KLEIPs handle the configuration and improvement of vital aspects of the Keng Lernitas Ekosistem, it is essential to establish a robust guvernanz system to ensure that the proposals being implemented are in the best interest of the wider community.
+
+In order to establish a fair voting procedure for the Keng Lernitas Ekosistem, each user's vote is determined by their amount of KLE described in this [Medium article](https://medium.com/@kenglernitasekosistem/guvernanz-voting-overview-52640b682c5f).
+
+The first election for Treasury "Developers" will be held following the acceptance of this KLEIP.
+
+In summary, KLE is transitioning into guvernanz while the Treasury will transition from a solo "Developer", which was kain.eth, to **a council of "Developers" inspired by the Spartan Diarchy regime consisting of 2 Kings and 3 Gerontes**.
+
+## Rationale
+
+The selection of Snapshot platform for handling the KLEIPs guvernanz process was due to factors such as the widespread usage amongst other projects, the gas-less nature of voting, and the great usability of the platform. In addition, managing the Treasury via a council of "Developers" rather than one "Developer" will ensure better decision-making and distribution of responsibilities.
+
+## Technical Specification
+
+#### Guvernanz Links
+- Voting platform: [https://vote.kenglernitas.wtf](https://vote.kenglernitas.wtf)
+- Proposals platform: [https://proposals.kenglernitas.wtf](https://proposals.kenglernitas.wtf)
+
+#### Transaction Threshold for MultiSig Wallet on Safe Global
+Theoretically, to send a transaction on Safe Global, the threshold is:
+- Option 1: Both Kings (2/2) must vote yes.
+- Option 2: One King (1/2) and two Gerontes (2/3) must vote yes.
+
+In reality, Kings have 2 addresses because implementing a custom weighting module is a security risk, hence we prefer this simpler approach.
+
+The new threshold becomes:
+- Option 1: Both Kings (4/4) must vote yes.
+- Option 2: One King (2/4) and two Gerontes (2/3) must vote yes.
+
+#### Election Information
+
+Profiles of each individual running for election:
+
+**kain.eth as King**
+   - EVM Address: `kain.eth`
+   - X Profile: @kaiynne
+   
+**Pstar as King**
+   - EVM Address: `0x57478b221022952C825668f105D2EE29c8B87ba4`
+   - X Profile: @CryptoPstar
+   
+**SNX Ambassador (including mastermojo.eth) as Gerontes**
+   - EVM Address: `0x406b607644c5D7BfDA95963201E45A4c6AB1c159
+   - X Profile: @snxambassadors @mastermojo83
+   
+**Warlas as Gerontes**
+   - EVM Address: `0x24Bd155D4994B99623A2fA5B8cB8Bd704E51239F`
+   - X Profile:
+   
+**Lernfr4u as Gerontes**
+   - EVM Address: `0x74630370197b4c4795bFEeF6645ee14F8cf8997D`
+   - X Profile:
+   
+**Apollo as Gerontes**
+   - EVM Address: `0x2B3E205b50a8358E0133c9AED71f693680b526CF`
+   - X Profile: @apollo_ni_us
+   
+**Utilmind as Gerontes**
+   - EVM Address: `0xe0654ABC5FB4917AC59237F8B9f75316982cF0bf`
+   - X Profile:
+
+**Morgo as Gerontes**
+   - EVM Address: `0xe0654ABC5FB4917AC59237F8B9f75316982cF0bf`
+   - X Profile: @0xMorgo
+
+# Copyright
+
+Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).

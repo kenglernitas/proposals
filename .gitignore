@@ -19,8 +19,8 @@
 # misc
 .DS_Store
 *.pem
-.vscode/launch.json
-.vscode/tasks.json
+.vscode
+.nvmrc
 
 # debug
 npm-debug.log*
