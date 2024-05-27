@@ -6,7 +6,7 @@ type: governance
 network: Base
 status: Draft
 created: '2024-05-25'
-updated: '2024-05-25'
+updated: '2024-05-26'
 ---
 
 # Proposal Summary
@@ -38,13 +38,16 @@ The selection of Snapshot platform for handling the KLEIPs guvernanz process was
 #### Transaction Threshold for MultiSig Wallet on Safe Global
 Theoretically, to send a transaction on Safe Global, the threshold is:
 - Option 1: Both Kengs (2/2) must vote yes.
-- Option 2: One Keng (1/2) and two Gerontes (2/3) must vote yes.
+- Option 2: One Keng (1/2) and one Gerontes (1/3) must vote yes.
+- Option 3: Three Gerontes (3/3) must vote yes.
 
 In reality, Kengs have 2 signature addresses because implementing a custom weighted module is a security risk, hence we prefer this simpler approach.
 
 The new threshold becomes:
 - Option 1: Both Kengs (4/4) must vote yes.
-- Option 2: One Keng (2/4) and two Gerontes (2/3) must vote yes.
+- Option 2: One Keng (2/4) and one Gerontes (1/3) must vote yes.
+- Option 3: Three Gerontes (3/3) must vote yes.
+
 
 #### Election Information
 
