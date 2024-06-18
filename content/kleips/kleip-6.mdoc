@@ -1,0 +1,42 @@
+---
+title: Addressing Dormant Whales in the $2192 Ecosystem
+id: 6
+author: lernitas
+type: governance
+network: Optimism and Base
+status: proposal
+created: '2024-06-19'
+---
+
+# Proposal Summary
+The $2192 token ecosystem has shown remarkable growth and engagement among active users, particularly through the participation in the batel. However, a subset of dormant whales—those who received the $2192 airdrop but did not participate in the burn or the batel - pose a potential threat to the market dynamics. Their inactivity, coupled with the holding of substantial token quantities, could destabilize the ecosystem when they decide to move or sell their tokens.
+
+To mitigate this risk and promote a more balanced and dynamic market, I propose a strategy to encourage these dormant whales to become active participants or reduce their impact through a token swap mechanism.
+
+# Problem Statement
+Dormant whales, by virtue of holding large amounts of $2192 tokens without participating in burn or batel, create an overhang that can lead to market manipulation or unexpected price fluctuations. Active users were incentivized to burn 90% of their airdrop and engage actively, contributing positively to the ecosystem. It is crucial to address the potential risk posed by these dormant accounts.
+
+# Proposed Solution: Token Swap and Controlled Decay Mechanism
+I propose implementing a token swap mechanism that encourages engagement from dormant whales while safeguarding the interests of active participants. This mechanism will be structured as follows:
+
+1. Token Swap Announcement: The swap from $2192 to $2192v2 will be available to all users and advertised for a period of one week before it commences.
+2. Initial Swap Ratio: The swap will begin with a 1:1 ratio, meaning each $2192 token can be exchanged for one $2192v2 token.
+3. Decay Mechanism: Starting 24 hours after the swap begins, the ratio will decay at a rate of 1% per hour. This means that the swap ratio will decrease progressively over time.
+    * After the first 24 hours, the swap ratio will start decreasing from 1:1 to lower ratios.
+    * The decay continues until the ratio reaches 1:0.1, approximately 10 days from the start.
+4. Permanent Pause: Once the ratio reaches 1:0.1, the swap will be paused indefinitely at this rate. This means that $2192 tokens can be swapped for $2192v2 tokens at a maximum ratio of 1:0.1 forever.
+5. Whitelist for Batel Participants: Accounts that participated in the batel event will be whitelisted to always receive a 1:1 swap ratio, irrespective of the ongoing decay. This incentivizes active participants and rewards their engagement.
+
+# Impact and Benefits
+* Encourages Activity: Dormant whales are incentivized to either become active or accept a significantly lower value for their tokens if they remain inactive.
+* Rewards Active Users: Active participants are rewarded with the ability to always swap at a favorable rate, potentially allowing them to buy from inactive users at a lower price and benefit from price arbitrage.
+* Gamification: The dynamic swap ratio creates opportunities for strategic trading and engagement, enhancing market interest and activity.
+
+# Implementation Plan
+1. Announcement and Communication: Inform the community about the token swap details, emphasizing the benefits and the decay mechanism. Provide clear guidelines on how to participate in the swap.
+2. Technical Development: Implement the smart contract for the swap, ensuring the decay function is accurately programmed and the whitelist for batel participants is established.
+3. Monitoring and Support: Monitor the swap process, provide support for participants, and address any technical issues promptly.
+4. Post-Swap Evaluation: Assess the impact of the swap on market dynamics and participant behavior. Use the insights to inform future strategies and enhancements.
+
+# Conclusion
+The proposed token swap with a controlled decay mechanism is a strategic approach to managing dormant whales in the $2192 ecosystem. By encouraging engagement and protecting active users, we can foster a more dynamic and stable market environment, ensuring the long-term health and success of the $2192 token community.
