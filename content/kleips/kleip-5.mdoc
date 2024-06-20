@@ -1,7 +1,7 @@
 ---
 title: User Passportization via ENS and NFT for Discord Access
 id: 5
-author: bromo
+author: Pstar (@username)
 type: protocol-upgrade
 network: Optimism, Base, Solana
 status: Draft
@@ -25,30 +25,30 @@ The increase in Sybil attacks on the platform necessitates the implementation of
 
 ### Specification
 
-1. **Form Submission:**
+1. **Form Submission**
    - The user fills out a form with the following parameters:
      - Discord Nickname
      - Participation Address (in the form of Ethereum wallet addresses)
 
-2. **Creation of ENS Record:**
-   - An ENS record is created for the user's subdomain (username.yourdomain.eth) with the following parameters:
-     - `Text: Nickname` — Discord Nickname.
-     - `Address: ResolvedAddress` — Users wallet address.
+2. **Creation of ENS Record**
+   - An ENS record is created for the user's subdomain (`username.yourdomain.eth`) with the following parameters:
+     - `Text: Nickname` — Discord Nickname
+     - `Address: ResolvedAddress` — User’s wallet address
 
-3. **Issuance of NFT Passport:**
-   - After creating the ENS record, an NFT passport is issued and linked to the user's address.
-   - The cost of the passport is determined by the `PASSPORT_FEE` parameter.
+3. **Issuance of NFT Passport**
+   - After creating the ENS record, an NFT passport is issued and linked to the user's address
+   - The cost of the passport is determined by the `PASSPORT_FEE` parameter
 
-4. **Bot Scanning:**
-   - A bot scans the ENS records and users in the channel to check their presence and validity.
-   - The absence of a valid ENS record or an incorrectly specified nickname leads to the automatic banning of the users current account by the bot.
+4. **Bot Scanning**
+   - A bot scans the ENS records and users in the channel to check their presence and validity
+   - The absence of a valid ENS record or an incorrectly specified nickname leads to the automatic banning of the user’s current account by the bot
 
 ### Parameters
 
-- **PASSPORT_FEE:** The parameter defines the cost of obtaining the NFT passport. Initial value: 0.1 ETH.
+- **PASSPORT_FEE:** The parameter defines the cost of obtaining the NFT passport. Initial value: 0.1 ETH
 - **ENS_RECORDS:**
-  - `Text: Nickname` — Discord Nickname.
-  - `Address: ResolvedAddress` — Users wallet address.
+  - `Text: Nickname` — Discord Nickname
+  - `Address: ResolvedAddress` — User’s wallet address
 
 ### Rationale
 
@@ -56,12 +56,12 @@ ENS and NFT technologies enable the implementation of a secure and authentic sys
 
 ### Test Cases
 
-1. **Registration Form:**
-   - Entering correct data results in the creation of an ENS record and the issuance of an NFT passport, as well as successful payment to the address belonging to the project treasury.
-   - Incorrectly specified nickname leads to the automatic banning of the user's current account by the bot.
+1. **Registration Form**
+   - Entering correct data results in the creation of an ENS record and the issuance of an NFT passport, as well as successful payment to the address belonging to the project treasury
+   - Incorrectly specified nickname leads to the automatic banning of the user's current account by the bot
 
-2. **Bot Scanning:**
-   - The absence of a valid ENS record results in the automatic banning of the user by the bot, which scans ENS records and users in the channel.
+2. **Bot Scanning**
+   - The absence of a valid ENS record results in the automatic banning of the user by the bot, which scans ENS records and users in the channel
 
 ### Copyright Waiver
 
