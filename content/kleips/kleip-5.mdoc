@@ -33,7 +33,7 @@ The increase in Sybil attacks on the platform necessitates the implementation of
 2. **Creation of ENS Record:**
    - An ENS record is created for the user's subdomain (username.yourdomain.eth) with the following parameters:
      - `Text: Nickname` — Discord Nickname.
-     - `Address: ResolvedAddress` — User’s wallet address.
+     - `Address: ResolvedAddress` — Users wallet address.
 
 3. **Issuance of NFT Passport:**
    - After creating the ENS record, an NFT passport is issued and linked to the user's address.
@@ -41,14 +41,14 @@ The increase in Sybil attacks on the platform necessitates the implementation of
 
 4. **Bot Scanning:**
    - A bot scans the ENS records and users in the channel to check their presence and validity.
-   - The absence of a valid ENS record or an incorrectly specified nickname leads to the automatic banning of the user’s current account by the bot.
+   - The absence of a valid ENS record or an incorrectly specified nickname leads to the automatic banning of the users current account by the bot.
 
 ### Parameters
 
 - **PASSPORT_FEE:** The parameter defines the cost of obtaining the NFT passport. Initial value: 0.1 ETH.
 - **ENS_RECORDS:**
   - `Text: Nickname` — Discord Nickname.
-  - `Address: ResolvedAddress` — User’s wallet address.
+  - `Address: ResolvedAddress` — Users wallet address.
 
 ### Rationale
 
