@@ -1,0 +1,85 @@
+```markdown
+# KLEIP-5: User Passportization via ENS and NFT for Discord Access
+
+---
+
+**id:** 5
+
+**title:** User Passportization via ENS and NFT for Discord Access
+
+**author:** Pstar (@username)
+
+**discussions-to:** [https://discord.com/invite/kenglarnitas](https://discord.com/invite/kenglarnitas) (channel `#KLEIP5`)
+
+**status:** Draft
+
+**created:** 2024-06-19
+
+**updated:** 2024-06-19
+
+**type:** protocol-upgrade
+
+**parameter-changes:** PASSPORT_FEE, ENS_RECORDS
+
+**network:** Optimism, Base, Solana
+
+**implementor:** Pstar (@username)
+
+---
+
+## Simple Summary
+
+Introduction of an NFT passport linked to an ENS record for user authorization in Discord and enhancing community security.
+
+## Abstract
+
+This KLEIP proposes the creation of a passportization system where each user on the Keng Lernitas Ekosistem platform will receive a unique NFT passport linked to an ENS record. This will enhance security, reduce the number of Sybil attacks, and ensure reliable user authentication in Discord and other platform systems. Note that obtaining the passport is optional, but without it, access to Discord will not be possible.
+
+## Motivation
+
+The increase in Sybil attacks on the platform necessitates the implementation of additional security measures. The introduction of NFT passports tied to ENS records will force attackers to incur significant financial costs, making attacks economically unviable. Additionally, this will allow for the introduction of new convenient features for users in the future. This measure will also help protect against spam and bots in the channel, as well as provide a more accurate real count of users than the current situation, though it is not perfect. As a fallback communication channel, Telegram will be used where Kain can clarify what went wrong.
+
+## Specification
+
+1. **Form Submission:**
+    - The user fills out a form with the following parameters:
+        - Discord Nickname
+        - Participation Address (in the form of Ethereum wallet addresses)
+
+2. **Creation of ENS Record:**
+    - An ENS record is created for the user's subdomain (username.yourdomain.eth) with the following parameters:
+        - `Text: Nickname` — Discord Nickname.
+        - `Address: ResolvedAddress` — User’s wallet address.
+
+3. **Issuance of NFT Passport:**
+    - After creating the ENS record, an NFT passport is issued and linked to the user's address.
+    - The cost of the passport is determined by the `PASSPORT_FEE` parameter.
+
+4. **Bot Scanning:**
+    - A bot scans the ENS records and users in the channel to check their presence and validity.
+    - The absence of a valid ENS record or an incorrectly specified nickname leads to the automatic banning of the user’s current account by the bot.
+
+## Parameters
+
+- **PASSPORT_FEE:** The parameter defines the cost of obtaining the NFT passport. Initial value: 0.1 ETH.
+- **ENS_RECORDS:**
+    - `Text: Nickname` — Discord Nickname.
+    - `Address: ResolvedAddress` — User’s wallet address.
+
+## Rationale
+
+ENS and NFT technologies enable the implementation of a secure and authentic system for user authentication. Financial costs associated with obtaining the passport reduce the economic feasibility of Sybil attacks.
+
+## Test Cases
+
+1. **Registration Form:**
+    - Entering correct data results in the creation of an ENS record and the issuance of an NFT passport, as well as successful payment to the address belonging to the project treasury.
+    - Incorrectly specified nickname leads to the automatic banning of the user's current account by the bot.
+
+2. **Bot Scanning:**
+    - The absence of a valid ENS record results in the automatic banning of the user by the bot, which scans ENS records and users in the channel.
+
+## Copyright Waiver
+
+Copyright and related rights waived via CC0.
+```
