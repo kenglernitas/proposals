@@ -1,185 +1,68 @@
 ---
-title: KLEIP Purpose and Guidelines
-id: 1
-author: Pstar(@thierbig)
-type: governance
-network: Optimism, Base and Solana
-status: Implemented
-created: '2024-05-11'
-updated: '2024-05-11'
+title: User Passportization via ENS and NFT for Discord Access
+id: 5
+author: Pstar (@username)
+type: protocol-upgrade
+network: Optimism, Base, Solana
+status: Draft
+created: '2024-06-19'
+updated: '2024-06-19'
 ---
-## What are KLEIPs?
 
-Keng Lernitas Ekosistem Improvement Proposals (KLEIPs) are a fundamental component of the Keng Lernitas Ekosistem, serving as a framework for suggesting and discussing changes, improvements, and updates to the Keng Lernitas Ekosistem system in a decentralized fashion. These proposals are an adaption from Infinex Improvement Proposals (XIPs) and provide a structured way for the Keng Lernitas Ekosistem community to collaborate and contribute to the development and evolution of Keng Lernitas Ekosistem.
+## KLEIP-5: User Passportization via ENS and NFT for Discord Access
 
-## KLEIP Rationale
+### Simple Summary
 
-KLEIPs are proposed as the primary mechanism for suggesting new features, collecting community input on an issue, documenting design decisions for changes to Keng Lernitas Ekosistem, and making adjustments to system parameters. By encompassing these aspects, KLEIPs help maintain clarity in Keng Lernitas Ekosistem's development roadmap, enabling stakeholders to collectively steer the course of the $2192 and $ZORKSEES growth.
+Introduction of an NFT passport linked to an ENS record for user authorization in Discord and enhancing community security.
 
-## KLEIP Work Flow
+### Abstract
 
-Parties involved in the process include the *author*, the [*KLEIP editors*](#KLEIP-editors), the Keng Lernitas Ekosistem Developers, and the Keng Lernitas Ekosistem Community.
+This KLEIP proposes the creation of a passportization system where each user on the Keng Lernitas Ekosistem platform will receive a unique NFT passport linked to an ENS record. This will enhance security, reduce the number of Sybil attacks, and ensure reliable user authentication in Discord and other platform systems. Note that obtaining the passport is optional, but without it, access to Discord will not be possible.
 
-Given the decentralized nature of the Keng Lernitas Ekosistem development process, anyone within the Keng Lernitas Ekosistem community is welcome to submit an KLEIP. However, to foster a collaborative environment, it is strongly encouraged that proposers engage in discussions within the Keng Lernitas Ekosistem Telegram (and Discord in the future!) community before formally submitting their proposals. This preliminary discourse allows for the exchange of ideas, feedback, and refinement of concepts, ultimately leading to more robust and well-considered KLEIPs.
+### Motivation
 
-Progression through the KLEIP workflow is requested by the KLEIP author through a pull request, and reviewed by the KLEIP editors.
+The increase in Sybil attacks on the platform necessitates the implementation of additional security measures. The introduction of NFT passports tied to ENS records will force attackers to incur significant financial costs, making attacks economically unviable. Additionally, this will allow for the introduction of new convenient features for users in the future. This measure will also help protect against spam and bots in the channel, as well as provide a more accurate real count of users than the current situation, though it is not perfect. As a fallback communication channel, Telegram will be used where Kain can clarify what went wrong.
 
-The KLEIP workflow comprises three main stages:
+### Specification
 
-1. Creation
+1. **Form Submission**
+   - The user fills out a form with the following parameters:
+     - Discord Nickname
+     - Participation Address (in the form of Ethereum wallet addresses)
 
-Once submitted, every KLEIP will begin as a `Draft`. It must then meet specific formatting criteria (largely, correct metadata in the header which will be discussed later), and be manually approved by an editor for further community discussion and consideration.
+2. **Creation of ENS Record**
+   - An ENS record is created for the user's subdomain (`username.yourdomain.eth`) with the following parameters:
+     - `Text: Nickname` — Discord Nickname.
+     - `Address: ResolvedAddress` — User’s wallet address.
 
-The author of the KLEIP proposal is responsible for building consensus within the community and documenting dissenting opinions. Authors must include a link to where people should continue discussing your KLEIP.
+3. **Issuance of NFT Passport**
+   - After creating the ENS record, an NFT passport is issued and linked to the user's address.
+   - The cost of the passport is determined by the `PASSPORT_FEE` parameter.
 
-1. Voting
+4. **Bot Scanning**
+   - A bot scans the ENS records and users in the channel to check their presence and validity.
+   - The absence of a valid ENS record or an incorrectly specified nickname leads to the automatic banning of the user’s current account by the bot.
 
-Once a `Draft` is believed to be mature enough and ready to progress, it must be `Approved` to be executed. Approval of an KLEIP will be granted through:
+### Parameters
 
-- Consultation with at least one member of the Keng Lernitas Ekosistem Developer, found through the Keng Lernitas Ekosistem Discord. They will assess whether the proposal needs a ‘Feasibility study’.
-- If it does need a ‘Feasibility Study’, the KLEIP will progress to the `Feasibility` stage. It will then be assigned a Developer who will work with the author to conduct a ‘Feasibility study’. Once all parties are satisfied, the KLEIP is moved to `Developer Review Pending` where it will be discussed.
-- If it does not need a ‘Feasibility Study’, the KLEIP will progress straight to `Developer Review Pending` where it will be discussed.
-- The Keng Lernitas Ekosistem Developers can send it back to the `Draft` or `Feasibility` stage if they believe more edits are required, if not, it will enter the next stage
+- **PASSPORT_FEE:** The parameter defines the cost of obtaining the NFT passport. Initial value: 0.1 ETH.
+- **ENS_RECORDS:**
+  - `Text: Nickname` — Discord Nickname.
+  - `Address: ResolvedAddress` — User’s wallet address.
 
-1. Approval
+### Rationale
 
-KLEIPs will be voted on by the Keng Lernitas Ekosistem Community via snapshot.org for a given duration, and proposals will be passed only under a majority decision. Approved KLEIPs are moved to `Approved`, and then `Implemented` once executed by the Keng Lernitas Ekosistem Developers or community members. Otherwise, it is `Rejected`.
+ENS and NFT technologies enable the implementation of a secure and authentic system for user authentication. Financial costs associated with obtaining the passport reduce the economic feasibility of Sybil attacks.
 
-## KLEIP status terms
+### Test Cases
 
-- **Draft** – The initial state of a new KLEIP before the Keng Lernitas Ekosistem Developers have assessed it.
-- **Feasibility** – a KLEIP that is being assessed for feasibility with an assigned Developer.
-- **Developer Review Pending** – a KLEIP that is awaiting a Keng Lernitas Ekosistem Developers Review after the Author is satisfied with feasibility.
-- **Vote In Progress** – a KLEIP being voted on by the Keng Lernitas Ekosistem community on snapshot.org.
-- **Approved** – a KLEIP that has successfully reached a majority Keng Lernitas Ekosistem snapshot.org vote in favour.
-- **Rejected** – a KLEIP that has failed to reach a majority Keng Lernitas Ekosistem snapshot.org vote in favour.
-- **Implemented** – a KLEIP that has been released and implemented.
+1. **Registration Form:**
+   - Entering correct data results in the creation of an ENS record and the issuance of an NFT passport, as well as successful payment to the address belonging to the project treasury.
+   - Incorrectly specified nickname leads to the automatic banning of the user's current account by the bot.
 
-## What belongs in a successful KLEIP?
+2. **Bot Scanning:**
+   - The absence of a valid ENS record results in the automatic banning of the user by the bot, which scans ENS records and users in the channel.
 
-Each KLEIP should have the following parts:
+### Copyright Waiver
 
-- Preamble – RFC 822 style headers containing metadata about the KLEIP, including the KLEIP number, a short descriptive title (limited to a maximum of 44 characters), and the author details.
-- Simple Summary – “If you can’t explain it simply, you don’t understand it well enough.” Provide a simplified and layman-accessible explanation of the KLEIP.
-- Abstract – a short description (~200 words) of the technical issue being addressed.
-- Motivation (*optional) – The ‘motivation’ is critical for KLEIPs that want to change any aspect of Keng Lernitas Ekosistem. It should clearly explain why the existing specification is inadequate to address the problem that the KLEIP solves. KLEIP submissions without sufficient motivation may be rejected outright.
-- Specification – The technical specification should describe the syntax and semantics of any new feature.
-- Parameters – The configurable parameters set in this section can be updated by a proposal with `type` header set to `parameter-change` to simplify the specification. New parameters should have initialised values under this heading.
-- Rationale – The rationale fleshes out the specification by describing what motivated the design and why particular design decisions were made. It should describe alternate designs that were considered and related work, e.g. how the feature is supported in other languages. The rationale may also provide evidence of consensus within the community and should discuss important objections or concerns raised during discussion.
-- Test Cases – Test cases may be added during the implementation phase but are required before implementation.
-- Copyright Waiver – All KLEIPs must be in the public domain. See the bottom of this KLEIP for an example copyright waiver.
-
-## KLEIP Formats and Templates
-
-KLEIPs should be written in [markdown] format. Image files should be included in a subdirectory of the `assets` folder for that KLEIP as follows: `assets/KLEIP-X` (for KLEIP **X**). When linking to an image in the KLEIP, use relative links such as `../assets/KLEIPs/KLEIP-X/image.png.`
-
-## KLEIP Header Preamble
-
-Each KLEIP must begin with an [RFC 822](https://www.ietf.org/rfc/rfc822.txt) style header preamble, preceded and followed by three hyphens (`---`). This header is also termed ["front matter" by Jekyll](https://jekyllrb.com/docs/front-matter/). The headers must appear in the following order. Headers marked with "*" are optional and are described below. All other headers are required.
-
-`id:` <KLEIP number> (this is determined by the KLEIP editor)
-
-`title:` <KLEIP title>
-
-`author:` <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s). Details are below.>
-
-`* discussions-to:` <a url pointing to the official discussion thread within the Keng Lernitas Ekosistem discord>
-
-`status:` < Draft | Feasibility | Developer Review Pending | Vote Pending | Approved | Rejected | Implemented >
-
-`created:` <date created on>
-
-`updated:` <comma separated list of dates>
-
-`* requires:` <KLEIP number(s)>
-
-`* resolution:` <a url pointing to the resolution of this KLEIP>
-
-`type:` <Label as “parameter-change” if solely altering protocol parameters or “protocol-upgrade” if changing the protocol itself>
-
-`parameter-changes:` <a list of the parameter changes that are being proposed, or “None” if no protocol parameters are being changed in the specification>
-
-`network:` <Optimism | Base | Base & Optimism | Solana, Optimism & Base>
-
-`implementor:` \ <a list of the author's or authors' name(s) and/or username(s), or name(s) and email(s), e.g. (use with the parentheses or triangular brackets): FirstName LastName (@GitHubUsername), FirstName LastName foo@bar.com, FirstName (@GitHubUsername) and GitHubUsername (@GitHubUsername)>
-
-Headers that permit lists must separate elements with commas.
-
-Headers requiring dates will always do so in the format of ISO 8601 (yyyy-mm-dd).
-
-#### `author` header
-
-The `author` header optionally lists the names, email addresses or usernames of the authors/owners of the KLEIP. Those who prefer anonymity may use a username only, or a first name and a username. The format of the author header value must be:
-
-> Random J. User [address@dom.ain](mailto:address@dom.ain)
-
-or
-
-> Random J. User (@username)
-
-if the email address or GitHub username is included, and
-
-> Random J. User
-
-if the email address is not given.
-
-#### `discussions-to` header
-
-While an KLEIP is in **Draft** or **Feasibility** status, a `discussions-to` header will indicate the URL for Telegram (and Discord in the future!) where the KLEIP is being discussed.
-
-#### `created` header
-
-The `created` header records the date that the KLEIP was assigned a number. Both headers should be in yyyy-mm-dd format, e.g. 2001-08-14.
-
-#### `updated` header
-
-The `updated` header records the date(s) when the KLEIP was updated with "substantial" changes. This header is only valid for KLEIPs of Draft and Active status.
-
-### `type` header
-
-The `type` header specifies the category of the KLEIP to which it belongs. The categories are as follows:
-
-- `parameter-change` (used for KLEIPs proposing modifications to existing parameters)
-- `meta-governance` (for KLEIPs concerning governance matters)
-- `core-upgrade` (pertaining to proposed protocol upgrades)
-- `integration-upgrade` (for introducing new features to the protocol).
-
-#### `requires` header
-
-KLEIPs may have a `requires` header, indicating the KLEIP numbers that this KLEIP depends on.
-
-## Auxiliary Files
-
-KLEIPs may include auxiliary files such as diagrams. Such files must be named KLEIP-XXXX-Y.ext, where “XXXX” is the KLEIP number, “Y” is a serial number (starting at 1), and “ext” is replaced by the actual file extension (e.g. “png”).
-
-## KLEIP Editor Responsibilities
-
-For every new KLEIP submitted, the Developer will operate as an editor. During the drafting stage of the process, the Developer will work closely with the Author to:
-
-- Ensure the title accurately describes the content.
-- Read the KLEIP to check if it is ready: sound and complete. The ideas must make technical sense, even if they don't seem likely to get to final status.
-- Check the KLEIP for language (spelling, grammar, sentence structure, etc.), markup (Github flavored Markdown), and code style
-
-If the KLEIP isn't ready, the editor will send it back to the author for revision, with specific instructions.
-
-Once the KLEIP is ready for the repository, the KLEIP editor will:
-
-- Assign an KLEIP number (generally the PR number or, if preferred by the author, the Issue # if there was discussion in the Issues section of this repository about this KLEIP)
-- Merge the corresponding pull request
-- Assign a Core Contributor to conduct a feasibility study on the KLEIP.
-- Send a message back to the KLEIP author with the next step.
-
-Many KLEIPs are written and maintained by Developers with write access to the Ethereum codebase. The KLEIP editors monitor KLEIP changes and correct any structure, grammar, spelling, or markup mistakes we see.
-
-The editors do not pass judgment on KLEIPs. They merely hold an administrative and editorial role.
-
-## History
-
-This KLEIP document was derived heavily from the Infinex Improvement Proposal document which is derived from the SIP Synthetix Improvement Proposal document and in many places, text was simply copied and modified. Any comments about the KLEIP document should be directed to the KLEIP editors. The history of the SIP is quoted below from the SIP document for context:
-
-- *“The SIP document was derived heavily from the EIP Ethereum Improvement Proposal document. In many places text was simply copied and modified. Any comments about the SIP document should be directed to the SIP editors. The history of the EIP is quoted below from the EIP document for context:”*
-  - *"This document (EIP) was derived heavily from*[*Bitcoin's BIP-0001*](https://github.com/bitcoin/bips)*written by Amir Taaki which in turn was derived from*[*Python's PEP-0001*](https://www.python.org/dev/peps/)*. In many places text was simply copied and modified. Although the PEP-0001 text was written by Barry Warsaw, Jeremy Hylton, and David Goodger, they are not responsible for its use..."* *
-
-## Copyright
-
-Copyright and related rights waived via [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+This KLEIP is in the public domain. Use it freely as per the [CC0](https://creativecommons.org/publicdomain/zero/1.0/) license guidelines.
